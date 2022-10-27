@@ -1,0 +1,7 @@
+Repaired file: C:/Users/Paul/Documents/ESE 545/spu_lite/spu_lite/src/spu_lite.bde:
+
+____________________________________________________________________________________________________
+Removed in line segments of same net:
+	Inline segments 188407 and 188406.
+	Inline segments 188738 and 188737.
+

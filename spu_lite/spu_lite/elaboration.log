@@ -1,0 +1,55 @@
+Active-HDL 11.1.262.7351 2020-11-27 16:08:48
+
+Elaboration top modules:
+Architecture                  TB_ARCHITECTURE(spu_lite_tb)
+
+
+-----------------------------------------------------------------------------------------------------------
+Entity                 | Architecture    | Library  | Info | Compiler Version        | Compilation Options
+-----------------------------------------------------------------------------------------------------------
+spu_lite_tb            | TB_ARCHITECTURE | spu_lite |      | 11.1.262.7351 (Windows) | -O3 -relax -2008
+quad_core_top          | rtl             | spu_lite |      | 11.1.262.7351 (Windows) | -O3 -relax -2008
+split_transaction_bus  | rtl             | spu_lite |      | 11.1.262.7351 (Windows) | -O3 -relax -2008
+mem_controller         | rtl             | spu_lite |      | 11.1.262.7351 (Windows) | -O3 -relax -2008
+spu_lite               | rtl             | spu_lite |      | 11.1.262.7351 (Windows) | -O3 -relax -2008
+arbiter                | round_robin     | spu_lite |      | 11.1.262.7351 (Windows) | -O3 -relax -2008
+data_cache             | rtl             | spu_lite |      | 11.1.262.7351 (Windows) | -O3 -relax -2008
+branch_unit            | rtl             | spu_lite |      | 11.1.262.7351 (Windows) | -O3 -2008
+byte_unit              | rtl             | spu_lite |      | 11.1.262.7351 (Windows) | -O3 -2008
+branch_prediction_unit | rtl             | spu_lite |      | 11.1.262.7351 (Windows) | -O3 -2008
+decode_unit            | rtl             | spu_lite |      | 11.1.262.7351 (Windows) | -O3 -2008
+forwarding_unit        | rtl             | spu_lite |      | 11.1.262.7351 (Windows) | -O3 -2008
+instruction_cache      | rtl             | spu_lite |      | 11.1.262.7351 (Windows) | -O3 -relax -2008
+instruction_memory     | rtl             | spu_lite |      | 11.1.262.7351 (Windows) | -O3 -2008
+issue_control_unit     | rtl             | spu_lite |      | 11.1.262.7351 (Windows) | -O3 -2008
+mem_unit               | rtl             | spu_lite |      | 11.1.262.7351 (Windows) | -O3 -relax -2008
+cache_controller       | rtl             | spu_lite |      | 11.1.262.7351 (Windows) | -O3 -relax -2008
+program_counter        | rtl             | spu_lite |      | 11.1.262.7351 (Windows) | -O3 -2008
+permute_unit           | rtl             | spu_lite |      | 11.1.262.7351 (Windows) | -O3 -2008
+register_file          | rtl             | spu_lite |      | 11.1.262.7351 (Windows) | -O3 -2008
+simple_fixed_unit1     | rtl             | spu_lite |      | 11.1.262.7351 (Windows) | -O3 -2008
+simple_fixed_unit2     | rtl             | spu_lite |      | 11.1.262.7351 (Windows) | -O3 -2008
+single_precision_unit  | rtl             | spu_lite |      | 11.1.262.7351 (Windows) | -O3 -2008
+-----------------------------------------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------------------------------------
+VHDL Package                             | Library  | Info | Compiler Version        | Compilation Options
+-----------------------------------------------------------------------------------------------------------
+standard                                 | std      |      |                         | <unavailable>
+TEXTIO                                   | std      |      |                         | <unavailable>
+std_logic_1164                           | ieee     |      |                         | <unavailable>
+spu_lite_pkg                             | spu_lite |      |                         | <unavailable>
+NUMERIC_STD                              | ieee     |      |                         | <unavailable>
+MATH_REAL                                | ieee     |      |                         | <unavailable>
+fixed_float_types                        | ieee     |      |                         | <unavailable>
+fixed_pkg                                | ieee     |      |                         | <unavailable>
+float_pkg                                | ieee     |      |                         | <unavailable>
+-----------------------------------------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------------------------------------
+Library                                  | Comment
+-----------------------------------------------------------------------------------------------------------
+ieee                                     | Standard IEEE packages library
+spu_lite                                 | None
+std                                      | Standard VHDL library
+-----------------------------------------------------------------------------------------------------------

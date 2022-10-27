@@ -1,0 +1,18 @@
+il $0,0
+il $1,127
+lqd $2,0($0)
+ll $3,4($0)
+lnop
+lnop
+lnop
+lnop
+lnop
+lnop
+lnop
+lnop
+lnop
+lnop
+lnop
+lnop
+sc $1,4($0)
+stop

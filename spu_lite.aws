@@ -1,0 +1,12 @@
+[Version]
+Version=10.5
+[Designs]
+spu_lite=.\spu_lite\spu_lite.adf
+[Browser]
+sort=order
+mode=none
+[Order]
+order=1
+macro=
+[Expand]
+spu_lite=1

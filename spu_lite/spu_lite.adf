@@ -1,0 +1,109 @@
+[Project]
+Current Flow=Generic
+VCS=0
+version=4
+Current Config=compile
+
+[Configurations]
+compile=spu_lite
+
+[Library]
+spu_lite=.\spu_lite\spu_lite.lib
+
+[Settings]
+AccessRead=0
+AccessReadWrite=0
+AccessACCB=0
+AccessACCR=0
+AccessReadWriteSLP=0
+AccessReadTopLevel=1
+DisableC=1
+ENABLE_ADV_DATAFLOW=0
+FLOW_TYPE=HDL
+LANGUAGE=VHDL
+REFRESH_FLOW=1
+FLOWTOOLS=NONE
+FAMILY=
+fileopenfolder=C:\Users\Paul\Documents\ESE 545\spu_lite\spu_lite\src
+
+[LocalVerilogSets]
+EnableSLP=1
+EnableDebug=0
+
+[LocalVhdlSets]
+CompileWithDebug=0
+
+[$LibMap$]
+spu_lite=.
+Active_lib=
+
+[SpecTracer]
+WindowVisible=0
+
+[HierarchyViewer]
+HierarchyInformation=spu_lite_tb|TB_ARCHITECTURE|0  
+ShowHide=ShowTopLevel
+Selected=
+
+[file_out:/spu_lite.bde]
+/..\compile\spu_lite.vhd=-1
+
+[Groups]
+TestBench=1
+
+[Files]
+/spu_lite_pkg.vhd=-1
+/branch_prediction_unit.vhd=-1
+/branch_unit.vhd=-1
+/byte_unit.vhd=-1
+/instruction_cache.vhd=-1
+/decode_unit.vhd=-1
+/forwarding_unit.vhd=-1
+/instruction_memory.vhd=-1
+/issue_control_unit.vhd=-1
+/permute_unit.vhd=-1
+/program_counter.vhd=-1
+/register_file.vhd=-1
+/simple_fixed_unit1.vhd=-1
+/simple_fixed_unit2.vhd=-1
+/single_precision_unit.vhd=-1
+/spu_lite.vhd=-1
+/arbiter.vhd=-1
+/split_transaction_bus.vhd=-1
+/data_cache.vhd=-1
+/mem_controller.vhd=-1
+/cache_controller.vhd=-1
+/mem_unit.vhd=-1
+/quad_core_top.vhd=-1
+TestBench/test_top.vhd=-1
+TestBench/test_top_tb.vhd=-1
+TestBench/quad_core_TB.vhd=-1
+
+[Files.Data]
+.\src\spu_lite_pkg.vhd=VHDL Source Code
+.\src\branch_prediction_unit.vhd=VHDL Source Code
+.\src\branch_unit.vhd=VHDL Source Code
+.\src\byte_unit.vhd=VHDL Source Code
+.\src\instruction_cache.vhd=VHDL Source Code
+.\src\decode_unit.vhd=VHDL Source Code
+.\src\forwarding_unit.vhd=VHDL Source Code
+.\src\instruction_memory.vhd=VHDL Source Code
+.\src\issue_control_unit.vhd=VHDL Source Code
+.\src\permute_unit.vhd=VHDL Source Code
+.\src\program_counter.vhd=VHDL Source Code
+.\src\register_file.vhd=VHDL Source Code
+.\src\simple_fixed_unit1.vhd=VHDL Source Code
+.\src\simple_fixed_unit2.vhd=VHDL Source Code
+.\src\single_precision_unit.vhd=VHDL Source Code
+.\src\spu_lite.vhd=VHDL Source Code
+.\src\arbiter.vhd=VHDL Source Code
+.\src\split_transaction_bus.vhd=VHDL Source Code
+.\src\data_cache.vhd=VHDL Source Code
+.\src\mem_controller.vhd=VHDL Source Code
+.\src\cache_controller.vhd=VHDL Source Code
+.\src\mem_unit.vhd=VHDL Source Code
+.\src\quad_core_top.vhd=VHDL Source Code
+.\src\TestBench\test_top.vhd=VHDL Source Code
+.\src\TestBench\test_top_tb.vhd=VHDL Source Code
+.\src\TestBench\quad_core_TB.vhd=VHDL Source Code
+

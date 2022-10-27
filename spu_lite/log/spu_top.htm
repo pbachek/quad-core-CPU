@@ -1,0 +1,202 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+
+<!----------------------------------------------------------------------------->
+<!--                          BEGIN HTML HEAD                                -->
+<!--                                                                         -->
+
+<HEAD>
+<TITLE>DRC Report File - spu_top.bde</TITLE>
+<STYLE>
+.Err	{color:#FF0000;cursor:hand;text-decoration:underline;}
+.Warn	{color:#0000FF;cursor:hand;text-decoration:underline;}
+.Info	{color:#000000;cursor:hand;text-decoration:underline;}
+.Sccss  {color:#009600;cursor:hand;text-decoration:underline;}
+.ErrH	{color:#FF0000;cursor:hand;text-decoration:underline;}
+.WarnH	{color:#0000FF;cursor:hand;text-decoration:underline;}
+.InfoH	{color:#000000;cursor:hand;text-decoration:underline;}
+.Err1	{color:#FF0000;}
+.Warn1	{color:#0000FF;}
+.Info1	{color:#000000;}
+.Sccss1 {color:#009600;}
+</STYLE>
+</HEAD>
+<BODY BGCOLOR="white" TEXT="black" LINK="blue" VLINK="purple" BACKGROUND="C:\Aldec\Active-HDL-Student-Edition\\Flows\Res\default.bmp">
+<FONT FACE="Serif">
+<tt>
+<!--                                                                         -->
+<!--                             END HEADER                                  -->
+<!----------------------------------------------------------------------------->
+
+<!----------------------------------------------------------------------------->
+<!--                            BEGIN VBSCRIPT                               -->
+<!--                                                                         -->
+<SCRIPT LANGUAGE=JSCRIPT>
+	function RollOn() {
+		switch(window.event.srcElement.className) {
+			case 'Err':
+				window.event.srcElement.className = 'ErrH'; break;
+			case 'Warn':
+				window.event.srcElement.className = 'WarnH'; break;
+			case 'Info':
+				window.event.srcElement.className = 'InfoH'; break;
+		}
+	}
+	function RollOff() {
+		switch(window.event.srcElement.className) {
+			case 'ErrH':
+				window.event.srcElement.className = 'Err'; break;
+			case 'WarnH':
+				window.event.srcElement.className = 'Warn'; break;
+			case 'InfoH':
+				window.event.srcElement.className = 'Info'; break;
+		}
+	}
+	function OnError(sMsg,sUrl,sLine) {
+		return true;
+	}
+	
+	document.onmouseover = RollOn;
+	document.onmouseout = RollOff;
+	window.onerror = OnError;
+</SCRIPT>
+
+<SCRIPT LANGUAGE=VBSCRIPT>
+
+Function IID_IDispatch
+	IID_IDispatch = "{00020400-0000-0000-C000-000000000046}"
+End Function
+
+Function CLSID_Executor
+	CLSID_Executor = "Aldec.ExePlugIn.Generic.7"
+End Function
+
+
+Sub OpenPlugIn (progid, template, document, element, string)
+
+	Dim executor, command
+
+	Set executor = window.external.aldec.connector.OpenPlugIn(CLSID_Executor, IID_IDispatch)
+
+	command = "?Activate[<"+progid+">][<"+template+">][<"+document+">][<"+element+">][<"+string+">]"
+
+	executor.ExecuteCommand command, ""
+
+End Sub
+
+
+</SCRIPT>
+<!--                                                                         -->
+<!--                             END VBSCRIPT                                -->
+<!----------------------------------------------------------------------------->
+
+<H2>DRC Report File - spu_top.bde</H2>
+
+Created on Son 2020-02-23 at 19:27:48
+<HR NOSHADE COLOR="#008080">
+<SPAN class=Info1>Checking file 'c:\My_Designs\spu_lite\spu_lite\src\spu_top.bde'.</SPAN><BR>
+<SPAN class=Info1>
+	<p class = Warn1 style=font-weight:bold;margin-top:0px;margin-bottom:0px>Incompatible range in mapping of nets
+	</p><ul style=margin-left:30px;margin-top:0px;margin-bottom:0px>
+	<li ;text-align:left><a class = Warn onclick=OpenPlugin('Aldec.BDE.7','0','c:\\My_Designs\\spu_lite\\spu_lite\\src\\spu_top.bde','','-errorid=165,2047');>	'U33' instance: 'Result(127:0)' output bus pin and 'BUS2032(7:0)' bus signal</a></li>
+	<li ;text-align:left><a class = Warn onclick=OpenPlugin('Aldec.BDE.7','0','c:\\My_Designs\\spu_lite\\spu_lite\\src\\spu_top.bde','','-errorid=168,2049');>	'U34' instance: 'Result(127:0)' output bus pin and 'BUS2032(7:0)' bus signal</a></li>
+	<li ;text-align:left><a class = Warn onclick=OpenPlugin('Aldec.BDE.7','0','c:\\My_Designs\\spu_lite\\spu_lite\\src\\spu_top.bde','','-errorid=171,2048');>	'U35' instance: 'Result(127:0)' output bus pin and 'BUS2032(7:0)' bus signal</a></li>
+	<li ;text-align:left><a class = Warn onclick=OpenPlugin('Aldec.BDE.7','0','c:\\My_Designs\\spu_lite\\spu_lite\\src\\spu_top.bde','','-errorid=177,1951');>	'U37' instance: 'Unit_d(2:0)' input bus pin and 'BUS245(7:0)' bus signal</a></li>
+	<li ;text-align:left><a class = Warn onclick=OpenPlugin('Aldec.BDE.7','0','c:\\My_Designs\\spu_lite\\spu_lite\\src\\spu_top.bde','','-errorid=650,1786');>	'U39' instance: 'F_rd_addr(6:0)' input bus pin and 'BUS1786(7:0)' bus signal</a></li></ul></SPAN><BR>
+<SPAN class=Info1>
+	<p class = Warn1 style=font-weight:bold;margin-top:0px;margin-bottom:0px>Nets connected to multiple sources
+	</p><ul style=margin-left:30px;margin-top:0px;margin-bottom:0px>
+	<li ;text-align:left><a class = Warn onclick=OpenPlugin('Aldec.BDE.7','0','c:\\My_Designs\\spu_lite\\spu_lite\\src\\spu_top.bde','','-errorid=2047,2048,,2049');>	'BUS2032' bus signal</a></li></ul></SPAN><BR>
+<SPAN class=Info1>
+	<p class = Warn1 style=font-weight:bold;margin-top:0px;margin-bottom:0px>Nets without source
+	</p><ul style=margin-left:30px;margin-top:0px;margin-bottom:0px>
+	<li ;text-align:left><a class = Warn onclick=OpenPlugin('Aldec.BDE.7','0','c:\\My_Designs\\spu_lite\\spu_lite\\src\\spu_top.bde','','-errorid=1798');>	'A_wr_addr' bus signal</a></li>
+	<li ;text-align:left><a class = Warn onclick=OpenPlugin('Aldec.BDE.7','0','c:\\My_Designs\\spu_lite\\spu_lite\\src\\spu_top.bde','','-errorid=1802');>	'A_wr_data' bus signal</a></li>
+	<li ;text-align:left><a class = Warn onclick=OpenPlugin('Aldec.BDE.7','0','c:\\My_Designs\\spu_lite\\spu_lite\\src\\spu_top.bde','','-errorid=1794');>	'A_wr_en' wire signal</a></li>
+	<li ;text-align:left><a class = Warn onclick=OpenPlugin('Aldec.BDE.7','0','c:\\My_Designs\\spu_lite\\spu_lite\\src\\spu_top.bde','','-errorid=1695');>	'BUS1695' bus signal</a></li>
+	<li ;text-align:left><a class = Warn onclick=OpenPlugin('Aldec.BDE.7','0','c:\\My_Designs\\spu_lite\\spu_lite\\src\\spu_top.bde','','-errorid=1719');>	'BUS1719' bus signal</a></li>
+	<li ;text-align:left><a class = Warn onclick=OpenPlugin('Aldec.BDE.7','0','c:\\My_Designs\\spu_lite\\spu_lite\\src\\spu_top.bde','','-errorid=1766');>	'BUS1766' bus signal</a></li>
+	<li ;text-align:left><a class = Warn onclick=OpenPlugin('Aldec.BDE.7','0','c:\\My_Designs\\spu_lite\\spu_lite\\src\\spu_top.bde','','-errorid=1770');>	'BUS1770' bus signal</a></li>
+	<li ;text-align:left><a class = Warn onclick=OpenPlugin('Aldec.BDE.7','0','c:\\My_Designs\\spu_lite\\spu_lite\\src\\spu_top.bde','','-errorid=1774');>	'BUS1774' bus signal</a></li>
+	<li ;text-align:left><a class = Warn onclick=OpenPlugin('Aldec.BDE.7','0','c:\\My_Designs\\spu_lite\\spu_lite\\src\\spu_top.bde','','-errorid=1778');>	'BUS1778' bus signal</a></li>
+	<li ;text-align:left><a class = Warn onclick=OpenPlugin('Aldec.BDE.7','0','c:\\My_Designs\\spu_lite\\spu_lite\\src\\spu_top.bde','','-errorid=1782');>	'BUS1782' bus signal</a></li>
+	<li ;text-align:left><a class = Warn onclick=OpenPlugin('Aldec.BDE.7','0','c:\\My_Designs\\spu_lite\\spu_lite\\src\\spu_top.bde','','-errorid=1786');>	'BUS1786' bus signal</a></li>
+	<li ;text-align:left><a class = Warn onclick=OpenPlugin('Aldec.BDE.7','0','c:\\My_Designs\\spu_lite\\spu_lite\\src\\spu_top.bde','','-errorid=1961');>	'BUS1961' bus signal</a></li>
+	<li ;text-align:left><a class = Warn onclick=OpenPlugin('Aldec.BDE.7','0','c:\\My_Designs\\spu_lite\\spu_lite\\src\\spu_top.bde','','-errorid=1951');>	'BUS245' bus signal</a></li>
+	<li ;text-align:left><a class = Warn onclick=OpenPlugin('Aldec.BDE.7','0','c:\\My_Designs\\spu_lite\\spu_lite\\src\\spu_top.bde','','-errorid=331');>	'BUS331' bus signal</a></li>
+	<li ;text-align:left><a class = Warn onclick=OpenPlugin('Aldec.BDE.7','0','c:\\My_Designs\\spu_lite\\spu_lite\\src\\spu_top.bde','','-errorid=608');>	'BUS608' bus signal</a></li>
+	<li ;text-align:left><a class = Warn onclick=OpenPlugin('Aldec.BDE.7','0','c:\\My_Designs\\spu_lite\\spu_lite\\src\\spu_top.bde','','-errorid=616');>	'BUS616' bus signal</a></li>
+	<li ;text-align:left><a class = Warn onclick=OpenPlugin('Aldec.BDE.7','0','c:\\My_Designs\\spu_lite\\spu_lite\\src\\spu_top.bde','','-errorid=620');>	'BUS620' bus signal</a></li>
+	<li ;text-align:left><a class = Warn onclick=OpenPlugin('Aldec.BDE.7','0','c:\\My_Designs\\spu_lite\\spu_lite\\src\\spu_top.bde','','-errorid=624');>	'BUS624' bus signal</a></li>
+	<li ;text-align:left><a class = Warn onclick=OpenPlugin('Aldec.BDE.7','0','c:\\My_Designs\\spu_lite\\spu_lite\\src\\spu_top.bde','','-errorid=628');>	'BUS628' bus signal</a></li>
+	<li ;text-align:left><a class = Warn onclick=OpenPlugin('Aldec.BDE.7','0','c:\\My_Designs\\spu_lite\\spu_lite\\src\\spu_top.bde','','-errorid=632');>	'BUS632' bus signal</a></li>
+	<li ;text-align:left><a class = Warn onclick=OpenPlugin('Aldec.BDE.7','0','c:\\My_Designs\\spu_lite\\spu_lite\\src\\spu_top.bde','','-errorid=636');>	'BUS636' bus signal</a></li>
+	<li ;text-align:left><a class = Warn onclick=OpenPlugin('Aldec.BDE.7','0','c:\\My_Designs\\spu_lite\\spu_lite\\src\\spu_top.bde','','-errorid=640');>	'BUS640' bus signal</a></li>
+	<li ;text-align:left><a class = Warn onclick=OpenPlugin('Aldec.BDE.7','0','c:\\My_Designs\\spu_lite\\spu_lite\\src\\spu_top.bde','','-errorid=644');>	'BUS644' bus signal</a></li>
+	<li ;text-align:left><a class = Warn onclick=OpenPlugin('Aldec.BDE.7','0','c:\\My_Designs\\spu_lite\\spu_lite\\src\\spu_top.bde','','-errorid=670');>	'BUS670' bus signal</a></li>
+	<li ;text-align:left><a class = Warn onclick=OpenPlugin('Aldec.BDE.7','0','c:\\My_Designs\\spu_lite\\spu_lite\\src\\spu_top.bde','','-errorid=709');>	'BUS709' bus signal</a></li>
+	<li ;text-align:left><a class = Warn onclick=OpenPlugin('Aldec.BDE.7','0','c:\\My_Designs\\spu_lite\\spu_lite\\src\\spu_top.bde','','-errorid=725');>	'BUS725' bus signal</a></li>
+	<li ;text-align:left><a class = Warn onclick=OpenPlugin('Aldec.BDE.7','0','c:\\My_Designs\\spu_lite\\spu_lite\\src\\spu_top.bde','','-errorid=733');>	'BUS733' bus signal</a></li>
+	<li ;text-align:left><a class = Warn onclick=OpenPlugin('Aldec.BDE.7','0','c:\\My_Designs\\spu_lite\\spu_lite\\src\\spu_top.bde','','-errorid=741');>	'BUS741' bus signal</a></li>
+	<li ;text-align:left><a class = Warn onclick=OpenPlugin('Aldec.BDE.7','0','c:\\My_Designs\\spu_lite\\spu_lite\\src\\spu_top.bde','','-errorid=758');>	'BUS758' bus signal</a></li>
+	<li ;text-align:left><a class = Warn onclick=OpenPlugin('Aldec.BDE.7','0','c:\\My_Designs\\spu_lite\\spu_lite\\src\\spu_top.bde','','-errorid=762');>	'BUS762' bus signal</a></li>
+	<li ;text-align:left><a class = Warn onclick=OpenPlugin('Aldec.BDE.7','0','c:\\My_Designs\\spu_lite\\spu_lite\\src\\spu_top.bde','','-errorid=772');>	'BUS772' bus signal</a></li>
+	<li ;text-align:left><a class = Warn onclick=OpenPlugin('Aldec.BDE.7','0','c:\\My_Designs\\spu_lite\\spu_lite\\src\\spu_top.bde','','-errorid=1810');>	'B_wr_addr' bus signal</a></li>
+	<li ;text-align:left><a class = Warn onclick=OpenPlugin('Aldec.BDE.7','0','c:\\My_Designs\\spu_lite\\spu_lite\\src\\spu_top.bde','','-errorid=1814');>	'B_wr_data' bus signal</a></li>
+	<li ;text-align:left><a class = Warn onclick=OpenPlugin('Aldec.BDE.7','0','c:\\My_Designs\\spu_lite\\spu_lite\\src\\spu_top.bde','','-errorid=1806');>	'B_wr_en' wire signal</a></li>
+	<li ;text-align:left><a class = Warn onclick=OpenPlugin('Aldec.BDE.7','0','c:\\My_Designs\\spu_lite\\spu_lite\\src\\spu_top.bde','','-errorid=1703');>	'NET1703' wire signal</a></li>
+	<li ;text-align:left><a class = Warn onclick=OpenPlugin('Aldec.BDE.7','0','c:\\My_Designs\\spu_lite\\spu_lite\\src\\spu_top.bde','','-errorid=1711');>	'NET1711' wire signal</a></li>
+	<li ;text-align:left><a class = Warn onclick=OpenPlugin('Aldec.BDE.7','0','c:\\My_Designs\\spu_lite\\spu_lite\\src\\spu_top.bde','','-errorid=600');>	'NET600' wire signal</a></li></ul></SPAN><BR>
+<SPAN class=Info1>
+	<p class = Warn1 style=font-weight:bold;margin-top:0px;margin-bottom:0px>Nets without load
+	</p><ul style=margin-left:30px;margin-top:0px;margin-bottom:0px>
+	<li ;text-align:left><a class = Warn onclick=OpenPlugin('Aldec.BDE.7','0','c:\\My_Designs\\spu_lite\\spu_lite\\src\\spu_top.bde','','-errorid=2047,2048,,2049');>	'BUS2032' bus signal</a></li>
+	<li ;text-align:left><a class = Warn onclick=OpenPlugin('Aldec.BDE.7','0','c:\\My_Designs\\spu_lite\\spu_lite\\src\\spu_top.bde','','-errorid=209');>	'BUS209' bus signal</a></li>
+	<li ;text-align:left><a class = Warn onclick=OpenPlugin('Aldec.BDE.7','0','c:\\My_Designs\\spu_lite\\spu_lite\\src\\spu_top.bde','','-errorid=678');>	'BUS678' bus signal</a></li>
+	<li ;text-align:left><a class = Warn onclick=OpenPlugin('Aldec.BDE.7','0','c:\\My_Designs\\spu_lite\\spu_lite\\src\\spu_top.bde','','-errorid=686');>	'BUS686' bus signal</a></li>
+	<li ;text-align:left><a class = Warn onclick=OpenPlugin('Aldec.BDE.7','0','c:\\My_Designs\\spu_lite\\spu_lite\\src\\spu_top.bde','','-errorid=694');>	'BUS694' bus signal</a></li></ul></SPAN><BR>
+<SPAN class=Info1>
+	<p class = Warn1 style=font-weight:bold;margin-top:0px;margin-bottom:0px>Unconnected symbol input pins
+	</p><ul style=margin-left:30px;margin-top:0px;margin-bottom:0px>
+	<li ;text-align:left><a class = Warn onclick=OpenPlugin('Aldec.BDE.7','0','c:\\My_Designs\\spu_lite\\spu_lite\\src\\spu_top.bde','','-errorid=177,177');>	In instance 'U37': 'clk', 'Result_d'</a></li>
+	<li ;text-align:left><a class = Warn onclick=OpenPlugin('Aldec.BDE.7','0','c:\\My_Designs\\spu_lite\\spu_lite\\src\\spu_top.bde','','-errorid=650');>	In instance 'U39': 'clk'</a></li>
+	<li ;text-align:left><a class = Warn onclick=OpenPlugin('Aldec.BDE.7','0','c:\\My_Designs\\spu_lite\\spu_lite\\src\\spu_top.bde','','-errorid=659');>	In instance 'U42': 'clk'</a></li>
+	<li ;text-align:left><a class = Warn onclick=OpenPlugin('Aldec.BDE.7','0','c:\\My_Designs\\spu_lite\\spu_lite\\src\\spu_top.bde','','-errorid=665');>	In instance 'U44': 'clk'</a></li>
+	<li ;text-align:left><a class = Warn onclick=OpenPlugin('Aldec.BDE.7','0','c:\\My_Designs\\spu_lite\\spu_lite\\src\\spu_top.bde','','-errorid=1725,1725,,1725,,,1725,,,,1725,,,,,1725');>	In instance 'U45': 'clk', 'Latency_d', 'RegdDst_d', 'RegWr_d', 'Result_d', 'Unit_d'</a></li>
+	<li ;text-align:left><a class = Warn onclick=OpenPlugin('Aldec.BDE.7','0','c:\\My_Designs\\spu_lite\\spu_lite\\src\\spu_top.bde','','-errorid=1728,1728,,1728,,,1728,,,,1728,,,,,1728');>	In instance 'U46': 'clk', 'Latency_d', 'RegdDst_d', 'RegWr_d', 'Result_d', 'Unit_d'</a></li>
+	<li ;text-align:left><a class = Warn onclick=OpenPlugin('Aldec.BDE.7','0','c:\\My_Designs\\spu_lite\\spu_lite\\src\\spu_top.bde','','-errorid=1731,1731,,1731,,,1731,,,,1731,,,,,1731');>	In instance 'U47': 'clk', 'Latency_d', 'RegdDst_d', 'RegWr_d', 'Result_d', 'Unit_d'</a></li>
+	<li ;text-align:left><a class = Warn onclick=OpenPlugin('Aldec.BDE.7','0','c:\\My_Designs\\spu_lite\\spu_lite\\src\\spu_top.bde','','-errorid=1734,1734,,1734,,,1734,,,,1734,,,,,1734');>	In instance 'U48': 'clk', 'Latency_d', 'RegdDst_d', 'RegWr_d', 'Result_d', 'Unit_d'</a></li>
+	<li ;text-align:left><a class = Warn onclick=OpenPlugin('Aldec.BDE.7','0','c:\\My_Designs\\spu_lite\\spu_lite\\src\\spu_top.bde','','-errorid=1737,1737,,1737,,,1737,,,,1737,,,,,1737');>	In instance 'U49': 'clk', 'Latency_d', 'RegdDst_d', 'RegWr_d', 'Result_d', 'Unit_d'</a></li>
+	<li ;text-align:left><a class = Warn onclick=OpenPlugin('Aldec.BDE.7','0','c:\\My_Designs\\spu_lite\\spu_lite\\src\\spu_top.bde','','-errorid=1740,1740,,1740,,,1740,,,,1740,,,,,1740');>	In instance 'U50': 'clk', 'Latency_d', 'RegdDst_d', 'RegWr_d', 'Result_d', 'Unit_d'</a></li>
+	<li ;text-align:left><a class = Warn onclick=OpenPlugin('Aldec.BDE.7','0','c:\\My_Designs\\spu_lite\\spu_lite\\src\\spu_top.bde','','-errorid=1743,1743,,1743,,,1743,,,,1743,,,,,1743,,,,,,1743');>	In instance 'U51': 'Branch_d', 'clk', 'Latency_d', 'RegdDst_d', 'RegWr_d', 'Result_d', 'Unit_d'</a></li>
+	<li ;text-align:left><a class = Warn onclick=OpenPlugin('Aldec.BDE.7','0','c:\\My_Designs\\spu_lite\\spu_lite\\src\\spu_top.bde','','-errorid=1746,1746,,1746,,,1746,,,,1746,,,,,1746,,,,,,1746');>	In instance 'U52': 'Branch_d', 'clk', 'Latency_d', 'RegdDst_d', 'RegWr_d', 'Result_d', 'Unit_d'</a></li>
+	<li ;text-align:left><a class = Warn onclick=OpenPlugin('Aldec.BDE.7','0','c:\\My_Designs\\spu_lite\\spu_lite\\src\\spu_top.bde','','-errorid=1749,1749,,1749,,,1749,,,,1749,,,,,1749,,,,,,1749');>	In instance 'U53': 'Branch_d', 'clk', 'Latency_d', 'RegdDst_d', 'RegWr_d', 'Result_d', 'Unit_d'</a></li>
+	<li ;text-align:left><a class = Warn onclick=OpenPlugin('Aldec.BDE.7','0','c:\\My_Designs\\spu_lite\\spu_lite\\src\\spu_top.bde','','-errorid=1752,1752,,1752,,,1752,,,,1752,,,,,1752,,,,,,1752');>	In instance 'U54': 'Branch_d', 'clk', 'Latency_d', 'RegdDst_d', 'RegWr_d', 'Result_d', 'Unit_d'</a></li>
+	<li ;text-align:left><a class = Warn onclick=OpenPlugin('Aldec.BDE.7','0','c:\\My_Designs\\spu_lite\\spu_lite\\src\\spu_top.bde','','-errorid=1755,1755,,1755,,,1755,,,,1755,,,,,1755,,,,,,1755');>	In instance 'U55': 'Branch_d', 'clk', 'Latency_d', 'RegdDst_d', 'RegWr_d', 'Result_d', 'Unit_d'</a></li>
+	<li ;text-align:left><a class = Warn onclick=OpenPlugin('Aldec.BDE.7','0','c:\\My_Designs\\spu_lite\\spu_lite\\src\\spu_top.bde','','-errorid=1758,1758,,1758,,,1758,,,,1758,,,,,1758,,,,,,1758');>	In instance 'U56': 'Branch_d', 'clk', 'Latency_d', 'RegdDst_d', 'RegWr_d', 'Result_d', 'Unit_d'</a></li>
+	<li ;text-align:left><a class = Warn onclick=OpenPlugin('Aldec.BDE.7','0','c:\\My_Designs\\spu_lite\\spu_lite\\src\\spu_top.bde','','-errorid=2243,2243,,2243,,,2243,,,,2243,,,,,2243,,,,,,2243,,,,,,,2243,,,,,,,,2243,,,,,,,,,2243,,,,,,,,,,2243,,,,,,,,,,,2243,,,,,,,,,,,,2243,,,,,,,,,,,,,2243,,,,,,,,,,,,,,2243,,,,,,,,,,,,,,,2243,,,,,,,,,,,,,,,,2243,,,,,,,,,,,,,,,,,2243,,,,,,,,,,,,,,,,,,2243,,,,,,,,,,,,,,,,,,,2243,,,,,,,,,,,,,,,,,,,,2243,,,,,,,,,,,,,,,,,,,,,2243,,,,,,,,,,,,,,,,,,,,,,2243,,,,,,,,,,,,,,,,,,,,,,,2243,,,,,,,,,,,,,,,,,,,,,,,,2243,,,,,,,,,,,,,,,,,,,,,,,,,2243,,,,,,,,,,,,,,,,,,,,,,,,,,2243,,,,,,,,,,,,,,,,,,,,,,,,,,,2243,,,,,,,,,,,,,,,,,,,,,,,,,,,,2243,,,,,,,,,,,,,,,,,,,,,,,,,,,,,2243,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,2243,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,2243,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,2243,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,2243,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,2243,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,2243,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,2243,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,2243,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,2243,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,2243,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,2243,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,2243,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,2243,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,2243,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,2243,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,2243,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,2243,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,2243,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,2243,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,2243,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,2243,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,2243,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,2243,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,2243,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,2243,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,2243,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,2243,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,2243,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,2243,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,2243,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,2243,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,2243,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,2243,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,2243,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,2243,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,2243,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,2243,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,2243');>	In instance 'U6': 'A_reg', 'B_reg', 'C_reg', 'D_reg', 'E_reg', 'even1_Latency', 'even1_RegDst', 'even1_RegWr', 'even1_Result', 'even2_Latency', 'even2_RegDst', 'even2_RegWr', 'even2_Result', 'even3_Latency', 'even3_RegDst', 'even3_RegWr', 'even3_Result', 'even4_Latency', 'even4_RegDst', 'even4_RegWr', 'even4_Result', 'even5_Latency', 'even5_RegDst', 'even5_RegWr', 'even5_Result', 'even6_Latency', 'even6_RegDst', 'even6_RegWr', 'even6_Result', 'even7_Latency', 'even7_RegDst', 'even7_RegWr', 'even7_Result', 'F_reg', 'odd1_Latency', 'odd1_RegDst', 'odd1_RegWr', 'odd1_Result', 'odd2_Latency', 'odd2_RegDst', 'odd2_RegWr', 'odd2_Result', 'odd3_Latency', 'odd3_RegDst', 'odd3_RegWr', 'odd3_Result', 'odd4_Latency', 'odd4_RegDst', 'odd4_RegWr', 'odd4_Result', 'odd5_Latency', 'odd5_RegDst', 'odd5_RegWr', 'odd5_Result', 'odd6_Latency', 'odd6_RegDst', 'odd6_RegWr', 'odd6_Result', 'odd7_Latency', 'odd7_RegDst', 'odd7_RegWr', 'odd7_Result', 'RA', 'RB', 'RC', 'RD', 'RE', 'RF'</a></li></ul></SPAN><BR>
+<SPAN class=Info1>
+	<p class = Warn1 style=font-weight:bold;margin-top:0px;margin-bottom:0px>Unconnected symbol output pins
+	</p><ul style=margin-left:30px;margin-top:0px;margin-bottom:0px>
+	<li ;text-align:left><a class = Warn onclick=OpenPlugin('Aldec.BDE.7','0','c:\\My_Designs\\spu_lite\\spu_lite\\src\\spu_top.bde','','-errorid=177,177,,177,,,177,,,,177');>	In instance 'U37': 'Latency_q', 'RegdDst_q', 'RegWr_q', 'Result_q', 'Unit_q'</a></li>
+	<li ;text-align:left><a class = Warn onclick=OpenPlugin('Aldec.BDE.7','0','c:\\My_Designs\\spu_lite\\spu_lite\\src\\spu_top.bde','','-errorid=665,665,,665,,,665,,,,665,,,,,665');>	In instance 'U44': 'Branch_q', 'Latency_q', 'RegdDst_q', 'RegWr_q', 'Result_q', 'Unit_q'</a></li>
+	<li ;text-align:left><a class = Warn onclick=OpenPlugin('Aldec.BDE.7','0','c:\\My_Designs\\spu_lite\\spu_lite\\src\\spu_top.bde','','-errorid=1725,1725,,1725,,,1725,,,,1725');>	In instance 'U45': 'Latency_q', 'RegdDst_q', 'RegWr_q', 'Result_q', 'Unit_q'</a></li>
+	<li ;text-align:left><a class = Warn onclick=OpenPlugin('Aldec.BDE.7','0','c:\\My_Designs\\spu_lite\\spu_lite\\src\\spu_top.bde','','-errorid=1728,1728,,1728,,,1728,,,,1728');>	In instance 'U46': 'Latency_q', 'RegdDst_q', 'RegWr_q', 'Result_q', 'Unit_q'</a></li>
+	<li ;text-align:left><a class = Warn onclick=OpenPlugin('Aldec.BDE.7','0','c:\\My_Designs\\spu_lite\\spu_lite\\src\\spu_top.bde','','-errorid=1731,1731,,1731,,,1731,,,,1731');>	In instance 'U47': 'Latency_q', 'RegdDst_q', 'RegWr_q', 'Result_q', 'Unit_q'</a></li>
+	<li ;text-align:left><a class = Warn onclick=OpenPlugin('Aldec.BDE.7','0','c:\\My_Designs\\spu_lite\\spu_lite\\src\\spu_top.bde','','-errorid=1734,1734,,1734,,,1734,,,,1734');>	In instance 'U48': 'Latency_q', 'RegdDst_q', 'RegWr_q', 'Result_q', 'Unit_q'</a></li>
+	<li ;text-align:left><a class = Warn onclick=OpenPlugin('Aldec.BDE.7','0','c:\\My_Designs\\spu_lite\\spu_lite\\src\\spu_top.bde','','-errorid=1737,1737,,1737,,,1737,,,,1737');>	In instance 'U49': 'Latency_q', 'RegdDst_q', 'RegWr_q', 'Result_q', 'Unit_q'</a></li>
+	<li ;text-align:left><a class = Warn onclick=OpenPlugin('Aldec.BDE.7','0','c:\\My_Designs\\spu_lite\\spu_lite\\src\\spu_top.bde','','-errorid=1740,1740,,1740,,,1740,,,,1740');>	In instance 'U50': 'Latency_q', 'RegdDst_q', 'RegWr_q', 'Result_q', 'Unit_q'</a></li>
+	<li ;text-align:left><a class = Warn onclick=OpenPlugin('Aldec.BDE.7','0','c:\\My_Designs\\spu_lite\\spu_lite\\src\\spu_top.bde','','-errorid=1743,1743,,1743,,,1743,,,,1743,,,,,1743');>	In instance 'U51': 'Branch_q', 'Latency_q', 'RegdDst_q', 'RegWr_q', 'Result_q', 'Unit_q'</a></li>
+	<li ;text-align:left><a class = Warn onclick=OpenPlugin('Aldec.BDE.7','0','c:\\My_Designs\\spu_lite\\spu_lite\\src\\spu_top.bde','','-errorid=1746,1746,,1746,,,1746,,,,1746,,,,,1746');>	In instance 'U52': 'Branch_q', 'Latency_q', 'RegdDst_q', 'RegWr_q', 'Result_q', 'Unit_q'</a></li>
+	<li ;text-align:left><a class = Warn onclick=OpenPlugin('Aldec.BDE.7','0','c:\\My_Designs\\spu_lite\\spu_lite\\src\\spu_top.bde','','-errorid=1749,1749,,1749,,,1749,,,,1749,,,,,1749');>	In instance 'U53': 'Branch_q', 'Latency_q', 'RegdDst_q', 'RegWr_q', 'Result_q', 'Unit_q'</a></li>
+	<li ;text-align:left><a class = Warn onclick=OpenPlugin('Aldec.BDE.7','0','c:\\My_Designs\\spu_lite\\spu_lite\\src\\spu_top.bde','','-errorid=1752,1752,,1752,,,1752,,,,1752,,,,,1752');>	In instance 'U54': 'Branch_q', 'Latency_q', 'RegdDst_q', 'RegWr_q', 'Result_q', 'Unit_q'</a></li>
+	<li ;text-align:left><a class = Warn onclick=OpenPlugin('Aldec.BDE.7','0','c:\\My_Designs\\spu_lite\\spu_lite\\src\\spu_top.bde','','-errorid=1755,1755,,1755,,,1755,,,,1755,,,,,1755');>	In instance 'U55': 'Branch_q', 'Latency_q', 'RegdDst_q', 'RegWr_q', 'Result_q', 'Unit_q'</a></li>
+	<li ;text-align:left><a class = Warn onclick=OpenPlugin('Aldec.BDE.7','0','c:\\My_Designs\\spu_lite\\spu_lite\\src\\spu_top.bde','','-errorid=1758,1758,,1758,,,1758,,,,1758,,,,,1758');>	In instance 'U56': 'Branch_q', 'Latency_q', 'RegdDst_q', 'RegWr_q', 'Result_q', 'Unit_q'</a></li>
+	<li ;text-align:left><a class = Warn onclick=OpenPlugin('Aldec.BDE.7','0','c:\\My_Designs\\spu_lite\\spu_lite\\src\\spu_top.bde','','-errorid=2243,2243,,2243,,,2243,,,,2243,,,,,2243');>	In instance 'U6': 'A', 'B', 'C', 'D', 'E', 'F'</a></li></ul></SPAN><BR>
+<SPAN class=Warn1>spu_top.bde - 0 error(s), 80 warning(s)</SPAN><BR>
+<SPAN class=Info1>DRC process completed in 5 second(s).</SPAN><BR>
+</tt>
+</FONT>
+       
+        </BODY>
+</HTML>
